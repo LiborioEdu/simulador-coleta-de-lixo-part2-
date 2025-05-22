@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;simulador-coleta-de-lixo-main.zip_expanded&apos;" deleteContents="false" description="Delete resource &apos;simulador-coleta-de-lixo-main.zip_expanded&apos;" element1="/simulador-coleta-de-lixo-main.zip_expanded" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1747876773499"/>
+</session>
