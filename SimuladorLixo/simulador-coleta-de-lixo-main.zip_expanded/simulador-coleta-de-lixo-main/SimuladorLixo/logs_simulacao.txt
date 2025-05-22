@@ -1,0 +1,82 @@
+[21/05/2025 21:51:48] Caminhão 0001 coletou 368kg na Zona Centro. Carga: 799/2000
+[21/05/2025 21:51:48] Caminhão 0001 coletou 431kg na Zona Centro. Carga: 799/2000
+[21/05/2025 21:51:48] Caminhão 0002 coletou 547kg na Zona Norte. Carga: 547/4000
+[21/05/2025 21:51:48] Caminhão 0002 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0003 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0003 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0004 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0006 coletou 674kg na Zona Sudeste. Carga: 674/2000
+[21/05/2025 21:51:48] Caminhão 0004 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0007 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0008 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0009 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0006 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0007 coletou 606kg na Zona Leste. Carga: 606/4000
+[21/05/2025 21:51:48] Caminhão 0008 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:48] Caminhão 0009 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:49] Caminhão 0001 coletou 539kg na Zona Centro. Carga: 1338/2000
+[21/05/2025 21:51:49] Caminhão 0002 coletou 356kg na Zona Norte. Carga: 903/4000
+[21/05/2025 21:51:49] Caminhão 0003 coletou 1264kg na Zona Sul. Carga: 1264/8000
+[21/05/2025 21:51:49] Caminhão 0004 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:49] Caminhão 0006 coletou 158kg na Zona Leste. Carga: 832/2000
+[21/05/2025 21:51:49] Caminhão 0007 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:49] Caminhão 0008 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:49] Caminhão 0009 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:50] Caminhão 0001 coletou 494kg na Zona Centro. Carga: 1832/2000
+[21/05/2025 21:51:50] Caminhão 0002 coletou 289kg na Zona Norte. Carga: 1192/4000
+[21/05/2025 21:51:50] Caminhão 0003 coletou 569kg na Zona Sul. Carga: 1833/8000
+[21/05/2025 21:51:50] Caminhão 0004 coletou 341kg na Zona Leste. Carga: 341/10000
+[21/05/2025 21:51:50] Caminhão 0006 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:50] Caminhão 0007 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:50] Caminhão 0008 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:50] Caminhão 0009 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:51] Caminhão 0001 coletou 168kg na Zona Centro. Carga: 2000/2000
+[21/05/2025 21:51:51] Caminhão 0002 coletou 241kg na Zona Norte. Carga: 1433/4000
+[21/05/2025 21:51:51] Caminhão 0003 coletou 409kg na Zona Sul. Carga: 2242/8000
+[21/05/2025 21:51:51] Caminhão 0004 coletou 341kg na Zona Leste. Carga: 682/10000
+[21/05/2025 21:51:51] Caminhão 0006 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:51] Caminhão 0007 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:51] Caminhão 0008 coletou 358kg na Zona Centro. Carga: 358/8000
+[21/05/2025 21:51:51] Caminhão 0009 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:52] Caminhão 0001 chegou na estação central
+[21/05/2025 21:51:52] Caminhão 0001 programado para Zona Norte (tempo: 0 min)
+[21/05/2025 21:51:52] Caminhão 0002 coletou 237kg na Zona Norte. Carga: 1670/4000
+[21/05/2025 21:51:52] Caminhão 0003 coletou 568kg na Zona Sul. Carga: 2810/8000
+[21/05/2025 21:51:52] Caminhão 0004 coletou 419kg na Zona Leste. Carga: 1101/10000
+[21/05/2025 21:51:52] Caminhão 0006 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:52] Caminhão 0007 coletou 368kg na Zona Centro. Carga: 974/4000
+[21/05/2025 21:51:52] Caminhão 0008 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:52] Caminhão 0009 coletou 1265kg na Zona Sudeste. Carga: 1265/10000
+[21/05/2025 21:51:53] Caminhão 0001 coletou 358kg na Zona Norte. Carga: 358/2000
+[21/05/2025 21:51:53] Caminhão 0002 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:53] Caminhão 0003 coletou 570kg na Zona Sul. Carga: 3380/8000
+[21/05/2025 21:51:53] Caminhão 0004 coletou 299kg na Zona Leste. Carga: 1400/10000
+[21/05/2025 21:51:53] Caminhão 0006 coletou 508kg na Zona Centro. Carga: 1340/2000
+[21/05/2025 21:51:53] Caminhão 0007 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:53] Caminhão 0008 coletou 203kg na Zona Sudeste. Carga: 561/8000
+[21/05/2025 21:51:53] Caminhão 0009 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:54] Caminhão 0001 coletou 378kg na Zona Norte. Carga: 736/2000
+[21/05/2025 21:51:54] Caminhão 0002 coletou 344kg na Zona Sul. Carga: 2014/4000
+[21/05/2025 21:51:54] Caminhão 0003 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:54] Caminhão 0004 coletou 365kg na Zona Leste. Carga: 1765/10000
+[21/05/2025 21:51:54] Caminhão 0006 coletou 399kg na Zona Centro. Carga: 1739/2000
+[21/05/2025 21:51:54] Caminhão 0007 coletou 371kg na Zona Sudeste. Carga: 1345/4000
+[21/05/2025 21:51:54] Caminhão 0008 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:54] Caminhão 0009 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:55] Caminhão 0001 coletou 328kg na Zona Norte. Carga: 1064/2000
+[21/05/2025 21:51:55] Caminhão 0002 coletou 519kg na Zona Sul. Carga: 2533/4000
+[21/05/2025 21:51:55] Caminhão 0003 coletou 339kg na Zona Leste. Carga: 3719/8000
+[21/05/2025 21:51:55] Caminhão 0004 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:55] Caminhão 0006 coletou 261kg na Zona Centro. Carga: 2000/2000
+[21/05/2025 21:51:55] Caminhão 0007 coletou 211kg na Zona Sudeste. Carga: 1556/4000
+[21/05/2025 21:51:55] Caminhão 0008 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:55] Caminhão 0009 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:56] Caminhão 0001 coletou 285kg na Zona Norte. Carga: 1349/2000
+[21/05/2025 21:51:56] Caminhão 0002 coletou 435kg na Zona Sul. Carga: 2968/4000
+[21/05/2025 21:51:56] Caminhão 0003 coletou 356kg na Zona Leste. Carga: 4075/8000
+[21/05/2025 21:51:56] Caminhão 0004 coletou 198kg na Zona Sudeste. Carga: 1963/10000
+[21/05/2025 21:51:56] Caminhão 0006 chegou na estação central
+[21/05/2025 21:51:56] Caminhão 0006 programado para Zona Sudeste (tempo: 0 min)
+[21/05/2025 21:51:56] Caminhão 0007 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:56] Caminhão 0008 CHEIO. Voltando para estação. Tempo de viagem: 0 min
+[21/05/2025 21:51:56] Caminhão 0009 CHEIO. Voltando para estação. Tempo de viagem: 0 min

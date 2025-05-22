@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\Aroldo\Desktop\ESTUDAS\2025\Matérias\Estruturas de dados\Tntativa de fazer estatisticas\simulador-coleta-de-lixo-main\SimuladorLixo\simulador-coleta-de-lixo-main.zip_expanded\.metadata\.plugins\org.eclipse.jdt.core
+1504614380.index
+1865797976.index
+3160254357.index
