@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"SimuladorLixo","l":"application"},{"m":"SimuladorLixo","l":"cidade"},{"m":"SimuladorLixo","l":"estruturasDeDados"}];updateSearchResults();
