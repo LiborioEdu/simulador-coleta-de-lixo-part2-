@@ -1,0 +1,36 @@
+package cidade;
+
+public class CaminhaoGrande {
+    protected int capacidadeMaxima = 20000;
+    protected int cargaAtual;
+    
+    public int getCargaAtual() {
+        return cargaAtual;
+    }
+
+    public void carregar(int quantidade) {
+        cargaAtual += quantidade;
+        if (cargaAtual > capacidadeMaxima) {
+            cargaAtual = capacidadeMaxima;
+        }
+    }
+
+    public boolean prontoParaPartir() {
+        return cargaAtual >= capacidadeMaxima;
+    }
+    
+    public void descarregar(int quantidade) {
+        int descarregado = Math.min(quantidade, cargaAtual);
+        cargaAtual -= descarregado;
+        System.out.println("Caminhão grande descarregou " + descarregado + "kg no aterro. Restante: " + cargaAtual + "kg.");
+    }
+    
+/*
+    public void descarregar() {
+        System.out.println("Caminhão grande partiu para o aterro com " + cargaAtual + "kg.");
+        cargaAtual = 0;
+    }
+*/    
+    
+}
+

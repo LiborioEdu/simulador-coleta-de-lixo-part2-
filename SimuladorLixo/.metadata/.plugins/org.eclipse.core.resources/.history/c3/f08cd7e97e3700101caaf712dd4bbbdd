@@ -1,0 +1,68 @@
+package application;
+
+
+import estruturasDeDados.MinhaListaDeStrings;
+
+public class Estatisticas {
+	private MinhaListaDeStrings logs = new MinhaListaDeStrings();
+    private int totalLixoGerado = 0;
+    private int totalLixoColetado = 0;
+    private int totalViagens = 0;
+    private int caminhoesEmTransito = 0;
+    private int caminhoesEmColeta = 0;
+    private int totalCaminhoes = 8;
+    
+    public Estatisticas() {
+        GerenciadorDeLogs.limparLogsAnteriores();
+    }
+    
+    public void adicionarLog(String log) {
+        logs.adicionar(log);
+        System.out.println(log); // Também imprime no console
+        GerenciadorDeLogs.registrarLog(log);
+    }
+    
+    public void registrarLixoGerado(int quantidade) {
+        totalLixoGerado += quantidade;
+    }
+    
+    public void registrarLixoColetado(int quantidade) {
+        totalLixoColetado += quantidade;
+    }
+    
+    public void registrarViagem() {
+        totalViagens++;
+    }
+    
+    public void registrarCaminhaoEmTransito() {
+        caminhoesEmTransito = totalCaminhoes - caminhoesEmColeta;
+    }
+    
+    public void registrarCaminhaoEmColeta() {
+        caminhoesEmColeta++;
+    }
+    
+    public void resetarContadores() {
+        caminhoesEmTransito = 0;
+        caminhoesEmColeta = 0;
+    }
+    
+    public String gerarRelatorio() {
+        StringBuilder relatorio = new StringBuilder();
+        relatorio.append("\n=== RELATÓRIO DE ESTATÍSTICAS ===\n");
+        relatorio.append(String.format("Total de lixo gerado: %,d kg\n", totalLixoGerado));
+        relatorio.append(String.format("Total de lixo coletado: %,d kg\n", totalLixoColetado));
+        StringBuilder append = relatorio.append(String.format("Percentual de coleta: %.1f%%\n", 
+            (totalLixoGerado > 0 ? (totalLixoColetado * 100.0 / totalLixoGerado) : 0)));
+        relatorio.append(String.format("Total de viagens realizadas: %,d\n", totalViagens));
+        relatorio.append(String.format("Caminhões em trânsito: %d\n", 8 - caminhoesEmColeta));
+        relatorio.append(String.format("Caminhões em coleta: %d\n", caminhoesEmColeta));
+        relatorio.append("===============================\n");
+        
+        return relatorio.toString();
+    }
+    
+    public MinhaListaDeStrings getLogs() {
+        return logs.copiar();
+    }
+}

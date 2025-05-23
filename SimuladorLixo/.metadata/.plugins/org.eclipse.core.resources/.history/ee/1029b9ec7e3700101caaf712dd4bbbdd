@@ -1,0 +1,181 @@
+package cidade;
+
+import application.Simulacao;
+import estruturasDeDados.Fila;
+import estruturasDeDados.Lista;
+
+public class EstacaoPadrao extends EstacaoTransferencia{
+
+    private int lixoArmazenado;
+    private Fila filaCaminhoesPequenos;
+    private Lista listaCaminhoesGrandes;
+    
+    private int tempoMaximoEspera = 30; // minutos (pode ser configurável)
+    private int tempoEsperaAtual = 0;
+
+    public EstacaoPadrao(String nome) {
+        super(nome);
+        this.lixoArmazenado = 0;
+        this.filaCaminhoesPequenos = new Fila(); 
+        this.listaCaminhoesGrandes = new Lista();
+    }
+
+    @Override
+    public void receberCaminhaoPequeno(CaminhaoPequeno caminhao) {
+    	filaCaminhoesPequenos.enqueue(caminhao);
+        System.out.println("Caminhão pequeno chegou à estação " + nome + " após " + caminhao.getTempoDeViagem() + " minutos de viagem.");
+    }
+    
+    public void processarFila() {
+        boolean caminhoesEsperando = filaCaminhoesPequenos.tamanho() > 0;
+        
+        if (caminhoesEsperando) {
+            tempoEsperaAtual++;
+            
+            System.out.println("Caminhões pequenos esperando há " + tempoEsperaAtual + 
+                             " minutos (limite: " + tempoMaximoEspera + " minutos)");
+            
+            if (tempoEsperaAtual >= tempoMaximoEspera) {
+                System.out.println("ALERTA: Tempo de espera excedido! Acionando caminhão grande adicional.");
+                CaminhaoGrande novoCaminhao = new CaminhaoGrandePadrao();
+                listaCaminhoesGrandes.add(novoCaminhao, 0);
+                tempoEsperaAtual = 0;
+            }
+        } else {
+            tempoEsperaAtual = 0;
+        }
+
+        // Processar transferência progressiva (1000 kg por minuto)
+        if (filaCaminhoesPequenos.tamanho() > 0) {
+            CaminhaoPequeno pequeno = filaCaminhoesPequenos.verProximoDaFila();
+            if (pequeno != null && pequeno.getCargaAtual() > 0) {
+                // Transferir até 1000 kg por minuto
+                int quantidadeTransferida = Math.min(1000, pequeno.getCargaAtual());
+                int descarregado = pequeno.descarregar(quantidadeTransferida); // Modificado para aceitar quantidade
+                lixoArmazenado += descarregado;
+                
+                System.out.println("Caminhão pequeno ID " + pequeno.getId() + 
+                                 " transferiu " + descarregado + "kg para estação " + nome/* + 
+                                 " (restante: " + pequeno.getCargaAtual() + "kg)"*/);
+                
+                // Se o caminhão esvaziou, remove da fila
+                if (pequeno.getCargaAtual() == 0) {
+                    filaCaminhoesPequenos.dequeue();
+                }
+            }
+        }
+    }
+
+    public void descarregarParaCaminhaoGrande(CaminhaoGrande novoCaminhao) {
+        CaminhaoGrande caminhaoAtual = listaCaminhoesGrandes.verProximoDaLista();
+
+        if (caminhaoAtual == null) {
+            caminhaoAtual = novoCaminhao;
+            listaCaminhoesGrandes.add(caminhaoAtual, 0);
+        }
+
+        // Transferir até 1000 kg por minuto para o caminhão grande
+        int quantidadeTransferida = Math.min(1000, lixoArmazenado);
+        if (quantidadeTransferida > 0) {
+            caminhaoAtual.carregar(quantidadeTransferida);
+            lixoArmazenado -= quantidadeTransferida;
+            System.out.println("Estação " + nome + " transferiu " + quantidadeTransferida + 
+                             "kg para caminhão grande (total: " + caminhaoAtual.getCargaAtual() + "kg)");
+        }
+
+        if (caminhaoAtual.prontoParaPartir()) {
+            System.out.println("Caminhão grande está cheio e será enviado ao aterro com " + caminhaoAtual.getCargaAtual() + "kg.");
+            caminhaoAtual.descarregar(caminhaoAtual.getCargaAtual());
+            listaCaminhoesGrandes.remove(0);
+        }
+    }
+
+    public void enviarCaminhoesGrandesParaAterro() {
+        CaminhaoGrande caminhao = listaCaminhoesGrandes.verProximoDaLista();
+
+        if (caminhao != null && caminhao.getCargaAtual() > 0) {
+            // Descarrega 1000 kg por minuto no aterro
+            int quantidadeDescarregada = Math.min(1000, caminhao.getCargaAtual());
+            caminhao.descarregar(quantidadeDescarregada); // Modificado para aceitar quantidade
+            
+            System.out.println("Caminhão grande enviado para o aterro (tolerância atingida) com " + 
+                             quantidadeDescarregada + "kg (restante: " + caminhao.getCargaAtual() + "kg).");
+            
+            // Se esvaziou completamente, remove da lista
+            if (caminhao.getCargaAtual() == 0) {
+                listaCaminhoesGrandes.remove(0);
+            }
+        }
+    }
+    
+  /*  
+    public void processarFila() {
+        boolean caminhoesEsperando = filaCaminhoesPequenos.tamanho() > 0;
+        
+        if (caminhoesEsperando) {
+            tempoEsperaAtual++; // Incrementa o tempo de espera
+            
+            System.out.println("Caminhões pequenos esperando há " + tempoEsperaAtual + 
+                             " minutos (limite: " + tempoMaximoEspera + " minutos)");
+            
+            // Verificar se excedeu o tempo máximo
+            if (tempoEsperaAtual >= tempoMaximoEspera) {
+                System.out.println("ALERTA: Tempo de espera excedido! Acionando caminhão grande adicional.");
+                CaminhaoGrande novoCaminhao = new CaminhaoGrandePadrao();
+                listaCaminhoesGrandes.add(novoCaminhao, 0);
+                tempoEsperaAtual = 0; // Reseta o contador
+            }
+        } else {
+            tempoEsperaAtual = 0; // Reseta se não há caminhões esperando
+        }
+
+        // Processamento normal da fila
+        while (filaCaminhoesPequenos.tamanho() > 0) {
+            CaminhaoPequeno pequeno = filaCaminhoesPequenos.verProximoDaFila();
+            if (pequeno != null) {
+                int descarregado = pequeno.descarregar();
+                lixoArmazenado += descarregado;
+                filaCaminhoesPequenos.dequeue();
+                
+                System.out.println("Caminhão pequeno ID " + pequeno.getId() + 
+                                 " descarregou " + descarregado + "kg na estação " + nome);
+            }
+        }
+    }
+    
+
+
+    @Override
+    public void descarregarParaCaminhaoGrande(CaminhaoGrande novoCaminhao) {
+        CaminhaoGrande caminhaoAtual = listaCaminhoesGrandes.verProximoDaLista();
+
+        if (caminhaoAtual == null) {
+            caminhaoAtual = novoCaminhao;
+            listaCaminhoesGrandes.add(caminhaoAtual, 0);
+        }
+
+        caminhaoAtual.carregar(lixoArmazenado);
+        System.out.println("Estação " + nome + " carregou caminhão grande com " + lixoArmazenado + "kg.");
+        lixoArmazenado = 0;
+
+        if (caminhaoAtual.prontoParaPartir()) {
+        	System.out.println("Caminhão grande está cheio e será enviado ao aterro com " + caminhaoAtual.getCargaAtual() + "kg.");
+            caminhaoAtual.descarregar();
+            listaCaminhoesGrandes.remove(0);
+        }
+    }
+    
+    public void enviarCaminhoesGrandesParaAterro() {
+        CaminhaoGrande caminhao = listaCaminhoesGrandes.verProximoDaLista();
+
+        if (caminhao != null && caminhao.getCargaAtual() > 0) {
+            System.out.println("Caminhão grande enviado para o aterro (tolerância atingida) com " + caminhao.getCargaAtual() + "kg.");
+            caminhao.descarregar();
+            listaCaminhoesGrandes.remove(0);
+        }
+    }
+    
+    public void configurarTempoMaximoEspera(int minutos) {
+        this.tempoMaximoEspera = minutos;
+    }*/
+}
